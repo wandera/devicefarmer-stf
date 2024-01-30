@@ -63,6 +63,10 @@ module.exports = function ShellCtrl($scope) {
   $scope.openAgent = function() {
     run('am start com.airwatch.androidagent/com.airwatch.agent.ui.activity.SplashActivity')
   }
+
+  $scope.openTestDpc = function() {
+    run('am start com.afwsamples.testdpc/.PolicyManagementActivity')
+  }
   // WANDERA CUSTOM - END
 
   $scope.openLocaleSettings = function() {
