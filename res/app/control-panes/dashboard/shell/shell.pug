@@ -50,6 +50,21 @@
     uib-tooltip='{{ "window_animation_scale 1, transition_animation_scale 1, animator_duration_scale 1" | translate }}')
       i.fa.fa-play
       span(translate) Enable Animations
+
+    .clearfix
+
+    button.btn.btn-xs.btn-info-outline(ng-click='run("wm density reset")',
+    uib-tooltip='{{ "wm density reset" | translate }}')
+      i.fa.fa-tablet
+      span(translate) Reset display density
+    button.btn.btn-xs.btn-info-outline(ng-click='run("settings put system font_scale 1")',
+    uib-tooltip='{{ "settings put system font_scale 1" | translate }}')
+      i.fa.fa-font
+      span(translate) Reset font size
+    button.btn.btn-xs.btn-info-outline(ng-click='run("am broadcast -a io.appium.settings.locale --es lang en --es country US")',
+    uib-tooltip='{{ "to en/US. Requires Appium Settings installed" | translate }}')
+      i.fa.fa-language
+      span(translate) Reset locale
     // NOTE: autofill doesn't work here
     form(method='post', enable-autofill, ng-submit='run(command)')
 
