@@ -65,6 +65,13 @@
     uib-tooltip='{{ "to en/US. Requires Appium Settings installed" | translate }}')
       i.fa.fa-language
       span(translate) Reset locale
+
+    .clearfix
+
+    button.btn.btn-xs.btn-info-outline(ng-click='run("dpm set-device-owner com.afwsamples.testdpc/.DeviceAdminReceiver")',
+    uib-tooltip='{{ "Requires removal of all accounts from the device" | translate }}')
+      i.fa.fa-user
+      span(translate) Set TestDPC device owner
     // NOTE: autofill doesn't work here
     form(method='post', enable-autofill, ng-submit='run(command)')
 
