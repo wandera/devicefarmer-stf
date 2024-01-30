@@ -30,6 +30,41 @@ module.exports = function ShellCtrl($scope) {
     run('am start -a android.settings.WIFI_SETTINGS')
   }
 
+  // WANDERA CUSTOM - START
+  $scope.openSettingActivity = function(activity) {
+    run('am start -a android.settings.' + activity)
+  }
+
+  $scope.openWandera = function() {
+    run('am start com.wandera.android')
+  }
+
+
+  $scope.openWanderaDev = function() {
+    run('am start com.wandera.android.dev')
+  }
+
+  $scope.openWanderaDebug = function() {
+    run('am start com.wandera.android.debug')
+  }
+
+  $scope.openGMail = function() {
+    run('am start com.google.android.gm')
+  }
+
+  $scope.openChrome = function() {
+    run('am start -n com.android.chrome/com.google.android.apps.chrome.Main')
+  }
+
+  $scope.openAppTester = function() {
+    run('am start dev.firebase.appdistribution/.main.MainActivity')
+  }
+
+  $scope.openAgent = function() {
+    run('am start com.airwatch.androidagent/com.airwatch.agent.ui.activity.SplashActivity')
+  }
+  // WANDERA CUSTOM - END
+
   $scope.openLocaleSettings = function() {
     openSetting('LocalePickerActivity')
   }
