@@ -60,10 +60,6 @@ module.exports = function ShellCtrl($scope) {
     run('am start dev.firebase.appdistribution/.main.MainActivity')
   }
 
-  $scope.openAgent = function() {
-    run('am start com.airwatch.androidagent/com.airwatch.agent.ui.activity.SplashActivity')
-  }
-
   $scope.openTestDpc = function() {
     run('am start com.afwsamples.testdpc/.PolicyManagementActivity')
   }
