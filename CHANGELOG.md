@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.6.8 (2024-04-04)
+
+* grant STFService permissions to be able to use features by @jupe in https://github.com/DeviceFarmer/stf/pull/765
+* Update STFService.apk to 2.5.2 by @koral-- in https://github.com/DeviceFarmer/stf/pull/766
+* Update version to 3.6.8 by @koral-- in https://github.com/DeviceFarmer/stf/pull/767
+
 ## 3.6.7 (2024-03-23)
 
 * Add Dockerfile for arm64 by @im-0 in https://github.com/DeviceFarmer/stf/pull/712
