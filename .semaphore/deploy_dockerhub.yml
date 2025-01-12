@@ -9,8 +9,7 @@ blocks:
             - checkout
             - export TAG=$(echo ${SEMAPHORE_GIT_TAG_NAME:-vlatest} |cut -c 2-)
             - docker buildx create --platform=linux/amd64,linux/arm64 --use
-            - 'docker buildx build --platform=linux/amd64,linux/arm64 -t "devicefarmer/stf:$TAG" .'
-            - docker push "devicefarmer/stf:$TAG"
+            - 'docker buildx build --platform=linux/amd64,linux/arm64 --push -t "devicefarmer/stf:$TAG" .'
       secrets:
         - name: dockerhub-secrets
       prologue:
