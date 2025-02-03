@@ -35,7 +35,7 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
     apt-get -y install wget python3 build-essential && \
     cd /tmp && \
     wget --progress=dot:mega \
-      https://nodejs.org/dist/v20.3.0/node-v20.3.0-linux-x64.tar.xz && \
+      https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-x64.tar.xz && \
     tar -xJf node-v*.tar.xz --strip-components 1 -C /usr/local && \
     rm node-v*.tar.xz && \
     su stf-build -s /bin/bash -c '/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js install' && \
@@ -71,7 +71,7 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
     rm -rf .npm .cache .config .local && \
     cd /app; \
   fi
-
+  
 RUN if [ "$TARGETARCH" = "arm64" ]; then \
     export DEBIAN_FRONTEND=noninteractive && \
     echo '--- Updating repositories' && \
@@ -82,7 +82,7 @@ RUN if [ "$TARGETARCH" = "arm64" ]; then \
     apt-get -y install pkg-config curl zip unzip wget python3 build-essential cmake ninja-build && \
     cd /tmp && \
     wget --progress=dot:mega \
-      https://nodejs.org/dist/v20.3.0/node-v20.3.0-linux-arm64.tar.xz && \
+      https://nodejs.org/dist/v22.11.0/node-v22.11.0-linux-arm64.tar.xz && \
     tar -xJf node-v*.tar.xz --strip-components 1 -C /usr/local && \
     rm node-v*.tar.xz && \
     useradd --system \
