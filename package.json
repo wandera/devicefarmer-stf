@@ -48,7 +48,7 @@
     "@devicefarmer/stf-wiki": "^1.0.0",
     "@dr.pogodin/csurf": "^1.14.1",
     "@julusian/jpeg-turbo": "^2.1.0",
-    "@node-saml/passport-saml": "^5.0.0",
+    "@node-saml/passport-saml": "^4.0.4",
     "@slack/web-api": "^7.7.0",
     "@targetprocess/swagger-tools": "^1.0.1",
     "android-device-list": "^1.2.10",
